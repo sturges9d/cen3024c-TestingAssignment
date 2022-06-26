@@ -11,22 +11,22 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class JUnitTestLogic {
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpBeforeClass() throws Exception {
-		System.out.println("Before class.");
+		System.out.println("Start testing.");
 	} // End of setUpBeforeClass method.
 	
-	@Before
+	@BeforeEach
 	public void setUp() throws Exception {
-		System.out.println("Before.");
+		System.out.println("\nStart test.\n");
 	} // End of setUp method.
 	
 	@Test
@@ -120,14 +120,14 @@ class JUnitTestLogic {
 		System.out.println(sortedResultsString);
 	} // End of convertHashMapToStringTest.
 	
-	@After
+	@AfterEach
 	public void tearDown() throws Exception {
-		System.out.println("After.");
+		System.out.println("\nEnd test.\n");
 	} // End of tearDown method.
 	
-	@AfterClass
+	@AfterAll
 	public static void tearDownAfterClass() throws Exception {
-		System.out.println("After class.");
+		System.out.println("End testing.");
 	} // End of tearDownAfterClass method.
 	
 } // End of JUnitTestLogic Class.
